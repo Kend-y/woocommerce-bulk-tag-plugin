@@ -1,0 +1,166 @@
+.product-tag-manager .notice {
+    margin: 20px 0;
+}
+
+
+.product-tag-manager .bulk-actions,
+.product-tag-manager .filter-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.product-tag-manager input[type="text"] {
+    min-width: 100px;
+}
+
+/* Style the product table */
+
+.product-tag-manager .product-table{
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+}
+
+.product-tag-manager .product-table td {
+    padding: 10px;
+}
+
+.product-tag-manager .product-table td:first-child,
+.product-tag-manager .product-table th:first-child {
+    padding-left: 20px;
+}
+
+.product-tag-manager .product-table td:last-child,
+.product-tag-manager .product-table th:last-child {
+    padding-right: 20px;
+}
+
+.product-tag-manager .product-table th {
+    padding: 20px 10px;
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.product-tag-manager .filter-form select{
+    margin: 0;
+}
+
+.product-tag-manager .product-checkbox {
+    width: 1%;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-tag-manager .product-checkbox input[type="checkbox"] {
+    display: block;
+    margin: 0 auto;
+}
+
+.product-tag-manager .product-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+.product-tag-manager .row-actions a{
+    text-decoration: none;
+}
+
+.product-tag-manager .row-actions a:hover{
+    text-decoration: underline;
+}
+
+
+.product-tag-manager .product-title:hover{
+    text-decoration: underline;
+}
+
+
+
+.product-tag-manager .product-image {
+    width: 1%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-tag-manager .product-image img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-tag-manager .product-stock,
+.product-tag-manager .product-price {
+    width: 1%;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.product-tag-manager .product-stock > span,
+.product-tag-manager .product-price > span{
+    padding: 5px 10px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+}
+
+
+.product-tag-manager .product-stock .stock-instock {
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+}
+
+.product-tag-manager .product-stock .stock-outofstock {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+}
+
+.product-tag-manager .product-stock .stock-onorder {
+    background-color: #515151;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.product-tag-manager input[type="checkbox"] {
+    margin: 0;
+}
+
+.product-tag-manager .product-action {
+    width: 1%;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.product-tag-manager .product-action input[type="text"] {
+    background-color: #ffffff;  
+}
+
+.product-tag-manager .tablepag{
+    margin-top: 20px;
+    text-align: right;
+}
+
+.product-tag-manager .tablepag_pages a,
+.product-tag-manager .tablepag_pages span{
+    margin: 0 2px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.product-tag-manager .tablepag_pages .current{
+    background-color: #2271b1;
+    color: #ffffff;
+    border-color: #2271b1;
+}
