@@ -1,222 +1,187 @@
-# Bulk Tag Updater pentru WooCommerce
+﻿# Bulk Tag Updater для WooCommerce
 
-Plugin simplu care te ajută să actualizezi rapid tag-urile promoționale la produsele din WooCommerce. Salvează timp când trebuie să modifici tag-uri la zeci sau sute de produse deodată.
+## Тема плагина
 
-## Ce face?
+**Bulk Tag Updater** — это инструмент централизованного управления промо-тегами для товаров WooCommerce. Главная идея: вместо того чтобы открывать каждый товар по отдельности, вы управляете тегами сразу для всего каталога — из одного места, за секунды. Плагин закрывает типичную боль: когда нужно обновить теги у десятков или сотен товаров перед акцией или после её окончания.
 
-Practic, adaugă un câmp personalizat "Promo Tag" la toate produsele tale WooCommerce și îți oferă o interfață centralizată unde poți vedea și modifica toate tag-urile dintr-un singur loc. Am făcut plugin-ul pentru că era enervant să intri în fiecare produs separat doar ca să schimbi un tag.
+---
 
-## Funcționalități principale
+## Что делает плагин?
 
-### 1. Câmp personalizat universal
-- Adaugă câmpul "Tag" la **TOATE tipurile** de produse WooCommerce:
-- Câmpul apare în tabul **Inventory** din Product Data
-- Se salvează automat când actualizezi produsul
+Плагин добавляет к каждому товару WooCommerce пользовательское поле `_promo_tag` («Promo Tag») и предоставляет отдельную страницу управления в панели администратора, где можно просматривать и редактировать теги всех товаров одновременно.
 
-### 2. Pagină centralizată de management
-- Interfață dedicată sub **WooCommerce → Product Tag**
-- Vezi toate produsele într-un tabel clar și organizat
-- Afișează informații importante: imagine, nume, stoc, preț, tag curent
-- Paginare automată (10 produse per pagină) pentru performanță optimă
+---
 
-### 3. Trei moduri de actualizare
+## Требования
 
-**a) Actualizare individuală**
-- Fiecare produs are propriul câmp de editare în tabel
-- Modifici tag-ul direct din listă, fără să deschizi produsul
-- Buton "Save" individual pentru fiecare produs
-- Perfect pentru ajustări rapide la 1-2 produse
+- WordPress 5.0 и выше
+- WooCommerce 3.0 и выше
+- PHP 7.0 и выше
 
-**b) Actualizare selectată (bulk update)**
-- Checkbox-uri pentru fiecare produs
-- Selectezi exact produsele care te interesează
-- Un singur câmp de input pentru tag-ul dorit
-- Buton "Actualizează selectate" care aplică tag-ul la toate produsele bifate
-- Bonus: Checkbox "Select All" în header pentru a bifa toate produsele dintr-o dată
+---
 
-**c) Actualizare totală**
-- Actualizează TOATE produsele din lista curentă cu un singur click
-- Respectă filtrele active
-- Câmp de input separat pentru claritate
-- Buton "Actualizează toate" distinct
-- Ideal pentru campanii promoționale sau resetări în masă
+## Установка
 
-### 4. Căutare
-- Caută produse după **nume** (doar în titlu, nu în descriere)
-- Căutare rapidă și precisă
-- Rezultatele apar instant
-- Perfect când știi exact ce produs cauți
+1. Скачайте zip-архив плагина.
+2. В WordPress перейдите в **Плагины → Добавить новый**.
+3. Нажмите **Загрузить плагин** и выберите zip-файл.
+4. Установите и активируйте плагин.
 
-### 5. Filtrare pe categorii
-- Dropdown cu toate categoriile tale WooCommerce
-- Filtrează lista pentru a vedea doar produsele dintr-o categorie
-- Combină cu căutarea pentru rezultate și mai precise
+После активации в меню **WooCommerce** появится новый пункт **Product Tag**.
 
-### 6. Combinații puternice 
+---
 
-**Căutare + Update toate**
-Cauți "laptop", apoi dai update la toate laptopurile găsite. Super rapid pentru produse similare.
+## Основные возможности
 
-**Categorie + Update toate**
-Filtrezi "Sale Items", scrii tag "50% OFF" și toate produsele din categoria respectivă primesc tag-ul. Perfect pentru promoții pe categorii întregi.
+### 1. Пользовательское поле тега в карточке товара
 
-**Categorie + Căutare + Selectare**
-Filtrezi categoria, cauți un cuvânt specific, bifezi doar câteva produse și actualizezi. Maximum control.
+- К **каждому товару WooCommerce** (простой, вариативный, групповой и т.д.) добавляется текстовое поле **«Tag»**.
+- Поле находится во вкладке **Inventory** (Управление запасами) блока «Product Data».
+- При сохранении товара значение поля автоматически записывается в мета-данные.
+- Это позволяет редактировать тег и напрямую из карточки товара, без использования страницы плагина.
 
-**Paginare + Selectare manuală**
-Navighezi prin pagini, bifezi produse random din diferite categorii, apoi actualizezi tot ce-ai bifat. Funcționează pentru scenarii complexe.
+---
 
+### 2. Централизованная страница управления
 
-### 7. Resetare rapidă
-- Buton "Reseteaza" pentru a șterge toate filtrele
-- Te întoarce instant la lista completă de produse
-- Util când vrei să începi o nouă căutare de la zero  
+Доступна по пути **WooCommerce → Product Tag**.
 
-## Ce îți trebuie
+Страница состоит из трёх зон:
 
-- WordPress 5.0+ 
-- WooCommerce 3.0+
-- PHP 7.0 sau ceva mai nou
+**Зона фильтров (верхняя)**
+- Поле поиска по названию товара (только по заголовку, не по описанию).
+- Выпадающий список всех категорий WooCommerce для фильтрации.
+- Кнопка **«Filtreaza»** — применить фильтры.
+- Кнопка **«Reseteaza»** — сбросить все фильтры и вернуться к полному списку.
 
-## Instalare
+**Зона массового обновления**
+- Поле ввода тега + кнопка **«Actualizează selectate»** — обновить отмеченные товары.
+- Поле ввода тега + кнопка **«Actualizează toate»** — обновить все отфильтрованные товары.
 
-E destul de simplu:
+**Таблица товаров**
+- Отображает 10 товаров на странице с автоматической пагинацией.
+- Столбцы: чекбокс, изображение, название, статус наличия, цена, поле тега + кнопка сохранения.
 
-1. Descarcă fișierul zip
-2. Du-te în WordPress la Plugins → Add New
-3. Apasă pe Upload Plugin
-4. Alege fișierul zip
-5. Instalează și activează
+---
 
-Gata! După ce activezi plugin-ul, o să găsești în meniul WooCommerce o opțiune nouă **Product Tag**.
+### 3. Три режима обновления тегов
 
-## Cum îl folosești
+#### а) Индивидуальное обновление
 
-### Accesare
-Mergi la **WooCommerce → Product Tag** și o să vezi pagina principală cu tabelul de produse.
+- В столбце **«Actiune»** каждая строка содержит поле ввода с текущим тегом и кнопку **«Save»**.
+- Позволяет изменить тег конкретного товара прямо из таблицы, не открывая его карточку.
+- Подходит для быстрой правки 1–2 товаров.
 
-### Interfața explicată
+#### б) Обновление выбранных товаров (Bulk Update)
 
-**Zona de sus:**
-- Câmp de căutare (pentru numele produsului)
-- Dropdown categorie (pentru filtrare)
-- Butoane "Filtreaza" și "Reseteaza"
+- Каждая строка таблицы имеет чекбокс.
+- В заголовке таблицы — чекбокс **«Select All»**, выделяющий все товары на текущей странице.
+- Вводите нужный тег в поле «Introdu Tag-ul» и нажимаете **«Actualizează selectate»**.
+- Тег применяется только к отмеченным товарам.
+- Если ни один товар не выбран или поле тега пустое — отображается сообщение об ошибке.
+- Счётчик в уведомлении об успехе показывает, сколько товаров было обновлено.
 
-**Zona de actualizare bulk:**
-- Două seturi de controale (unul pentru selectate, unul pentru toate)
-- Separatorul "|" între ele pentru claritate vizuală
+#### в) Обновление всех товаров
 
-**Tabelul de produse:**
-- Checkbox (pentru selectare)
-- Imagine produs
-- Nume + linkuri Edit și View
-- Status stoc (colorat: verde=în stoc, roșu=indisponibil, gri=pe comandă)
-- Preț
-- Coloana "Actiune" cu câmp individual și buton Save
+- Отдельное поле ввода и кнопка **«Actualizează toate»**.
+- Обновляет **все** товары, соответствующие активным фильтрам (поиск + категория), независимо от страницы пагинации.
+- Если фильтры не применены — обновляет весь каталог.
+- Идеально для массовых промо-кампаний или сброса тегов после акции.
 
-### Scenarii de utilizare
+---
 
-**Scenariu 1: Lansare produse noi**
-1. Căutare: scrii "2024" (sau cum denumești produsele noi)
-2. Bifezi toate produsele găsite (sau folosești checkbox din header)
-3. Scrii "NOU" în câmpul pentru selectate
-4. Apeși "Actualizează selectate"
-5. Rezultat: Toate produsele noi au tag-ul "NOU"
+### 4. Поиск по названию
 
-**Scenariu 2: Promoție pe o categorie întreagă**
-1. Filtrare: alegi categoria "Electrocasnice" din dropdown
-2. Apeși "Filtreaza"
-3. Scrii "REDUCERE 30%" în câmpul pentru toate
-4. Apeși "Actualizează toate"
-5. Rezultat: Toate produsele din Electrocasnice au tag-ul de reducere
+- Строка поиска фильтрует товары **только по заголовку** (post_title), исключая описания и мета-данные.
+- Реализовано через кастомный хук `posts_search` с флагом `search_prod_title_only`, что обеспечивает точность и скорость поиска.
 
-**Scenariu 3: Actualizare rapidă pentru un produs**
-1. Căutare: găsești produsul specific
-2. În coloana "Actiune", scrii tag-ul direct în câmp
-3. Apeși "Save" de lângă produs
-4. Rezultat: Doar acel produs e actualizat, fără să-l deschizi
+---
 
-**Scenariu 4: Mix de produse din categorii diferite**
-1. Nu folosești filtre (vezi toate produsele)
-2. Navighezi prin pagini și bifezi manual produsele dorite
-3. Scrii tag-ul pentru selectate
-4. Actualizezi
-5. Rezultat: Doar produsele bifate sunt modificate
+### 5. Фильтрация по категории
 
-**Scenariu 5: Resetare tag-uri după promoție**
-1. Filtrare: categoria "Sale Items"
-2. Scrii câmp gol
-3. Actualizezi toate
-4. Rezultat: Toate produsele din categoria respectivă au tag-ul șters/resetat
+- Выпадающий список формируется динамически из всех категорий WooCommerce (`product_cat`).
+- Фильтрация через `tax_query` — стандартный и производительный механизм WordPress.
+- Фильтр категории и поиск можно комбинировать одновременно.
 
-### Editare tag din pagina produsului
+---
 
-Ai două locații unde poți edita tag-ul:
+### 6. Отображение статуса наличия
 
-**Opțiunea 1: Din plugin (recomandat pentru bulk)**
-WooCommerce → Product Tag → tabel cu toate produsele
+В столбце **«Стoc»** статус товара отображается цветным значком:
 
-**Opțiunea 2: Din pagina produsului (pentru editări individuale)**
-1. Products → All Products
-2. Click pe produsul dorit
-3. În Product Data, deschide tabul **Inventory**
-4. Găsești câmpul "Promo Tag" după SKU și Stock
-5. Completezi și salvezi produsul
+| Статус WooCommerce | Надпись | Цвет |
+|---|---|---|
+| `instock` | In Stoc | Зелёный |
+| `outofstock` | Indisponibil | Красный |
+| `onbackorder` | Pe comanda | Серый |
 
-## Exemple practice
+---
 
-**Exemplu 1: Black Friday**
-Vrei să marchezi 50 de produse pentru Black Friday:
-- Filtrezi categoria "Deals"
-- Scrii "BLACK FRIDAY -70%" în câmpul pentru toate
-- Boom, toate produsele de deal au tag-ul
+### 7. Пагинация
 
-**Exemplu 2: Produse epuizate**
-Vrei să marchezi ce e "Coming Soon":
-- Filtrezi și găsești produsele fără stoc
-- Selectezi manual cele care revin în stoc
-- Tag: "Disponibil în curând"
+- По умолчанию отображается **10 товаров** на странице.
+- При наличии нескольких страниц внизу таблицы появляются кнопки навигации **Prev / Next** и номера страниц.
+- Пагинация корректно работает совместно с активными фильтрами поиска и категории.
 
-**Exemplu 3: Colecție nouă**  
-Lansezi o colecție "Summer 2024":
-- Cauți "summer" în căutare
-- Bifezi toate produsele relevante
-- Tag: "Summer Collection 2024"
+---
 
-## Exemple
+### 8. Безопасность
 
-**Exemplu 1:** Vrei să marchezi produse noi  
-Bifezi produsele, scrii "NOU", actualizezi. Done.
+- Все формы защищены **WordPress Nonce** (уникальными одноразовыми токенами):
+  - `update_product_action` — для индивидуального обновления.
+  - `bulk_update_action` — для обновления выбранных.
+  - `update_all_action` — для обновления всех.
+- Все пользовательские данные проходят санитизацию (`sanitize_text_field`, `absint`).
+- Доступ к странице управления ограничен ролью `manage_woocommerce`.
+- Если WooCommerce не активен — плагин показывает уведомление и не выполняется.
 
-**Exemplu 2:** Produse la reducere  
-FilDetalii tehnice (dacă te interesează)
+---
 
-Plugin-ul salvează tag-urile ca meta data (`_promo_tag`) pentru fiecare produs. Am folosit API-ul WordPress pentru toate operațiunile, deci e safe și compatible.
+## Практические сценарии использования
 
-Structura e simplă:
-- `wc_bulk_tag.php` - fișierul principal
-- `assets/css/admin.css` - stilurile pentru pagina admin
-- `README.md` - fișierul curent
+### Сценарий 1: Запуск новой коллекции
+1. В поиске введите ключевое слово из названий новых товаров.
+2. Отметьте все найденные товары (чекбокс в заголовке).
+3. Введите тег `NOU` и нажмите **«Actualizează selectate»**.
 
-Securitate:
-- Am folosit nonce-uri pentru toate formularele
-- Inputurile sunt sanitizate 
-- Doar utilizatorii cu permisiunea `manage_woocommerce` pot accesa
+### Сценарий 2: Промо-акция на категорию
+1. Выберите нужную категорию из выпадающего списка.
+2. Нажмите **«Filtreaza»**.
+3. Введите тег `REDUCERE 30%` в поле для всех.
+4. Нажмите **«Actualizează toate»**.
 
-## Probleme comune
+### Сценарий 3: Быстрое редактирование одного товара
+1. Найдите товар через поиск.
+2. В столбце **«Actiune»** введите новый тег.
+3. Нажмите **«Save»** напротив этого товара.
 
-**Plugin-ul nu apare în meniu**  
-Verifică dacă WooCommerce e instalat și activat. Și dacă ai permisiuni de admin.
+### Сценарий 4: Сброс тегов после акции
+1. Отфильтруйте категорию «Sale Items».
+2. Оставьте поле тега пустым.
+3. Нажмите **«Actualizează toate»** — теги будут очищены.
 
-**Tag-urile nu se salvează**  
-Încearcă să refreshuiești pagina. Sau verifică dacă ești încă logat.
+### Сценарий 5: Выборка товаров из разных категорий
+1. Просматривайте страницы без фильтров.
+2. Вручную отмечайте нужные товары на разных страницах.
+3. Введите тег и нажмите **«Actualizează selectate»**.
 
-**Eroare "Te rog selectează cel puțin un produs"**  
-Înseamnă că ai apăsat "Actualizează selectate" fără să bifezi produse. Bifează ceva întâi.
-Dolghieru Maxim
+---
 
-## Info
+## Редактирование тега из карточки товара
 
-Versiune: 1.0.0  
-Autor: Dolghieru Maxim
+Помимо страницы плагина, тег можно изменить напрямую:
 
+1. Перейдите в **Products → All Products**.
+2. Откройте нужный товар.
+3. В блоке **Product Data** перейдите на вкладку **Inventory**.
+4. Найдите поле **«Tag»** (после SKU и Stock).
+5. Введите значение и сохраните товар.
+
+---
+
+## Техническая информация
+
+- Теги хранятся как мета-данные товара с ключом `_promo_tag` (wp_postmeta).
+- Основной файл плагина: `wc_bulk_tag.php`.
+- Стили административной страницы: `assets/css/admin.css`.
+- Плагин использует стандартное WordPress/WooCommerce API — совместим с любыми темами и плагинами.
